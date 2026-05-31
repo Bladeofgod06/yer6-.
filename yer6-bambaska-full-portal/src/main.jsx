@@ -244,7 +244,7 @@ function Landing({ openLogin, openRules, playersCount }) {
       <header className="topBar">
         <div className="brandText">
           <b>YER6</b>
-          <span>İstanbul Roleplay Portal</span>
+          <span>Yer6 Roleplay</span>
         </div>
         <nav>
           <button>Ana Ekran</button>
@@ -268,7 +268,7 @@ function Landing({ openLogin, openRules, playersCount }) {
           <div className="heroCopy">
             <span className="pill"><MapPin size={15} /> YER6 </span>
             <h1>YER6 <br /><em></em></h1>
-            <p> .</p>
+            <p>Türkiye'nin En İyi Roleplay Sunucusu</p>
             <div className="heroActions">
               <Button onClick={() => openLogin("player-register")}><UserPlus size={18} /> Direkt Kayıt Ol</Button>
               <Button variant="ghost" onClick={() => openLogin("admin-login")}><Crown size={18} /> Panel Giriş</Button>
