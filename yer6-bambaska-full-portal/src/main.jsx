@@ -11,11 +11,10 @@ import {
 import "./style.css";
 
 const scenes = [
-  { title: "Yer6 Profil", img: "/images/yer6-scene-1.jpg", text: "Karakter hikayeni İstanbul sokaklarında yaz." },
+  { title: "Yer6", img: "/images/yer6-scene-1.jpg", text: "Karakter hikayeni İstanbul sokaklarında yaz." },
   { title: "Ekip Ruhu", img: "/images/yer6-scene-2.jpg", text: "Aile, ekip ve sosyal rol akışları için özel sistem." },
-  { title: "Operasyon Odası", img: "/images/yer6-scene-3.jpg", text: "legal, illegal ve özel ekip rolleri." },
-  { title: "İstanbul Gecesi", img: "/images/yer6-scene-4.jpg", text: "Neon şehir atmosferi ve özel portal tasarımı." },
-  { title: "Metro Portal", img: "/images/yer6-scene-5.jpg", text: "YER6'e özel yepyeni arayüz." },
+  { title: "Yer6 Takım", img: "/images/yer6-scene-3.jpg", text: "legal, illegal ve özel ekip rolleri." },
+
 ];
 
 const tracks = [
