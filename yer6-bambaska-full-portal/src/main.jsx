@@ -269,8 +269,8 @@ function Landing({ openLogin, openRules, playersCount }) {
             <h1>YER6 <br /><em></em></h1>
             <p>Türkiye'nin En İyi Roleplay Sunucusu</p>
             <div className="heroActions">
-              <Button onClick={() => openLogin("player-register")}><UserPlus size={18} /> Direkt Kayıt Ol</Button>
-              <Button variant="ghost" onClick={() => openLogin("admin-login")}><Crown size={18} /> Panel Giriş</Button>
+              <Button onClick={() => openLogin("player-register")}><UserPlus size={18} />Kayıt Ol</Button>
+              <Button variant="ghost" onClick={() => openLogin("admin-login")}><Crown size={18} />Panel Giriş</Button>
             </div>
           </div>
 
@@ -299,7 +299,7 @@ function Landing({ openLogin, openRules, playersCount }) {
       </section>
 
       <section className="quickStats">
-        <Stat icon={Users} title="Direkt Kayıt" value="Aktif" />
+        <Stat icon={Users} title="Kayıt" value="Aktif" />
         <Stat icon={Shield} title="Panel" value="Full" />
         <Stat icon={Ticket} title="Destek" value="Canlı" />
         <Stat icon={Database} title="Log" value="Açık" />
@@ -365,7 +365,7 @@ function Landing({ openLogin, openRules, playersCount }) {
           <b>YER6 ROLEPLAY</b>
           <span></span>
         </div>
-        <p>© 2026 YER6 DEV TEAM</p>
+        <p>© 2026 YER6 TEAM</p>
       </footer>
     </div>
   );
@@ -375,7 +375,7 @@ export default function App() {
   const [page, setPage] = useState("landing");
   const [admins, setAdmins] = useState(starterAdmins);
   const [players, setPlayers] = useState([
-    { username: "Demo Oyuncu", password: "123456", discordId: "123456789012345678", steamUrl: "https://steamcommunity.com/profiles/76561198000000001", status: "Aktif", createdAt: "Sistem" },
+    { username: "Founder", password: "123456", discordId: "123456789012345678", steamUrl: "https://steamcommunity.com/profiles/76561198000000001", status: "Aktif", createdAt: "Sistem" },
   ]);
   const [tickets, setTickets] = useState([{ id: "#1021", type: "Oyuncu Şikayet", title: "RDM Şikayeti", discordId: "123456789012345678", description: "RDM şikayeti", proof: "", assigned: "Boşta", state: "Açık" }]);
   const [applications, setApplications] = useState([]);
@@ -558,7 +558,7 @@ export default function App() {
         <div className="loginGrid">
           <Card className="loginInfo">
             <Logo />
-            <h1>YER6 PORTAL</h1>
+            <h1>YER6</h1>
             <p>Oyuncular onaysız direkt kayıt olur. Founder panel tüm kayıtları, banları, başvuruları ve destekleri takip eder.</p>
             <div className="founderBox">
               <div><small>FOUNDER</small><b>Can Polat</b></div>
@@ -688,7 +688,10 @@ export default function App() {
               <LogBox logs={logs.slice(0, 7)} />
               <Card className="pad">
                 <h2>Founder Notu</h2>
-                <p className="muted">Bu tasarım Anadolu tarzı değil; YER6 için sıfırdan yapılmış metro/neon portal konseptidir. Oyuncu onayı kapalı, kayıt direkt aktiftir.</p>
+                <p className="muted">YER6 sadece bir roleplay sunucusu değil, emekle kurulmuş bir topluluktur.
+Burada her karakterin bir hikayesi, her kararın bir sonucu vardır. Amacımız oyuncularımıza adil, kaliteli ve unutulmaz bir rol deneyimi sunmaktır. Kurallara saygı gösteren, topluluğa katkı sağlayan ve rol kalitesini yükselten herkese kapımız sonuna kadar açıktır.
+YER6'nın başarısı yönetim ekibinden değil, bu topluluğun bir parçası olan tüm oyunculardan gelir.
+İyi roller dileriz.</p>
               </Card>
             </div>
           </>
