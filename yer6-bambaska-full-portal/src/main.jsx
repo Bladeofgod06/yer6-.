@@ -13,10 +13,9 @@ import "./style.css";
 const scenes = [
   { title: "Yer6 Profil", img: "/images/yer6-scene-1.jpg", text: "Karakter hikayeni İstanbul sokaklarında yaz." },
   { title: "Ekip Ruhu", img: "/images/yer6-scene-2.jpg", text: "Aile, ekip ve sosyal rol akışları için özel sistem." },
-  { title: "Operasyon Odası", img: "/images/yer6-scene-3.jpg", text: "Yetkili, legal, illegal ve özel ekip rolleri." },
+  { title: "Operasyon Odası", img: "/images/yer6-scene-3.jpg", text: "legal, illegal ve özel ekip rolleri." },
   { title: "İstanbul Gecesi", img: "/images/yer6-scene-4.jpg", text: "Neon şehir atmosferi ve özel portal tasarımı." },
-  { title: "Metro Portal", img: "/images/yer6-scene-5.jpg", text: "Anadolu tarzı değil, YER6'e özel yepyeni arayüz." },
-  { title: "Founder Kontrol", img: "/images/yer6-scene-6.jpg", text: "Founder için yönetim, log, ban ve başvuru takibi." },
+  { title: "Metro Portal", img: "/images/yer6-scene-5.jpg", text: "YER6'e özel yepyeni arayüz." },
 ];
 
 const tracks = [
@@ -37,7 +36,7 @@ const ranks = [
 
 const starterAdmins = [
   { username: "Arda Eker", password: "Arda1234", discordId: "1144954440667910155", role: "Founder" },
-  { username: "Can Polat", password: "123456", discordId: "987654321098765432", role: "Founder" },
+  { username: "Can Polat", password: "123456", discordId: "330748660956790785", role: "Founder" },
 ];
 
 const punishments = [
@@ -93,7 +92,7 @@ function Logo({ small = false }) {
       <div className="logoRing" />
       <Crown className="logoCrown" />
       <span>Y6</span>
-      {!small && <b>ISTANBUL</b>}
+      {!small && <b>YER6</b>}
     </div>
   );
 }
@@ -253,7 +252,7 @@ function Landing({ openLogin, openRules, playersCount }) {
           <button onClick={() => openLogin("player-register")}>Kayıt</button>
           <button>Discord</button>
         </nav>
-        <Button onClick={() => openLogin("admin-login")}><Lock size={16} /> Founder Panel</Button>
+        <Button onClick={() => openLogin("admin-login")}><Lock size={16} />Panel</Button>
       </header>
 
       <section className="heroPortal">
@@ -267,12 +266,12 @@ function Landing({ openLogin, openRules, playersCount }) {
 
         <div className="heroMain">
           <div className="heroCopy">
-            <span className="pill"><MapPin size={15} /> İSTANBUL / YER6 PORTAL V2</span>
-            <h1>YER6 <br /><em>Metro Portal</em></h1>
-            <p>Anadolu kopyası değil; YER6 için sıfırdan tasarlanmış, farklı konseptli, dolu dolu roleplay portalı.</p>
+            <span className="pill"><MapPin size={15} /> YER6 </span>
+            <h1>YER6 <br /><em></em></h1>
+            <p> .</p>
             <div className="heroActions">
               <Button onClick={() => openLogin("player-register")}><UserPlus size={18} /> Direkt Kayıt Ol</Button>
-              <Button variant="ghost" onClick={() => openLogin("admin-login")}><Crown size={18} /> Founder Giriş</Button>
+              <Button variant="ghost" onClick={() => openLogin("admin-login")}><Crown size={18} /> Panel Giriş</Button>
             </div>
           </div>
 
@@ -280,8 +279,8 @@ function Landing({ openLogin, openRules, playersCount }) {
             <div className="liveHead">
               <span className="onlineDot" />
               <div>
-                <h3>YER6 LIVE</h3>
-                <p>Aktif Portal</p>
+                <h3>YER6</h3>
+                <p></p>
               </div>
             </div>
             <div className="scenePreview">
@@ -295,7 +294,6 @@ function Landing({ openLogin, openRules, playersCount }) {
               <div><span>Oyuncu</span><b>{playersCount}</b></div>
               <div><span>Harita</span><b>İstanbul</b></div>
               <div><span>Kayıt</span><b>Direkt Aktif</b></div>
-              <div><span>Panel</span><b>Founder</b></div>
             </div>
           </Card>
         </div>
@@ -303,13 +301,13 @@ function Landing({ openLogin, openRules, playersCount }) {
 
       <section className="quickStats">
         <Stat icon={Users} title="Direkt Kayıt" value="Aktif" />
-        <Stat icon={Shield} title="Founder Panel" value="Full" />
+        <Stat icon={Shield} title="Panel" value="Full" />
         <Stat icon={Ticket} title="Destek" value="Canlı" />
         <Stat icon={Database} title="Log" value="Açık" />
       </section>
 
       <section className="ecosystem">
-        <SectionTitle kicker="SİSTEMLER" title="YER6 Ekosistemi" text="Site sadece giriş ekranı değil; oyuncu, yetkili ve founder tarafını ayıran tam portal." />
+        <SectionTitle kicker="SİSTEMLER" title="YER6 Ekosistemi" text="Türkiyenin En İyisi." />
         <div className="systemGrid">
           {[
             [UserPlus, "Direkt Oyuncu Kayıt", "Onay beklemeden kayıt, Steam kontrolü ve oyuncu paneline geçiş."],
@@ -329,7 +327,7 @@ function Landing({ openLogin, openRules, playersCount }) {
       </section>
 
       <section className="showcase">
-        <SectionTitle kicker="YER6 GÖRSELLERİ" title="Oyundan Kareler" text="Attığın görseller site içinde özel galeri ve arka plan olarak kullanıldı." />
+        <SectionTitle kicker="YER6 GÖRSELLERİ" title="Oyundan Kareler" text="" />
         <div className="showcaseGrid">
           {scenes.slice(0, 3).map((s, i) => (
             <Card className="shotCard" key={s.title}>
@@ -366,7 +364,7 @@ function Landing({ openLogin, openRules, playersCount }) {
         <Logo small />
         <div>
           <b>YER6 ROLEPLAY</b>
-          <span>İstanbul Metro Portal • Sıfırdan Özgün Tasarım</span>
+          <span></span>
         </div>
         <p>© 2026 YER6 DEV TEAM</p>
       </footer>
@@ -383,7 +381,7 @@ export default function App() {
   const [tickets, setTickets] = useState([{ id: "#1021", type: "Oyuncu Şikayet", title: "RDM Şikayeti", discordId: "123456789012345678", description: "RDM şikayeti", proof: "", assigned: "Boşta", state: "Açık" }]);
   const [applications, setApplications] = useState([]);
   const [bans, setBans] = useState([]);
-  const [logs, setLogs] = useState(["[Sistem] YER6 Metro Portal açıldı."]);
+  const [logs, setLogs] = useState(["[Sistem] YER6 açıldı."]);
   const [authMode, setAuthMode] = useState("admin-login");
   const [auth, setAuth] = useState({ username: "", password: "", discordId: "", steamUrl: "" });
   const [currentAdmin, setCurrentAdmin] = useState(null);
@@ -529,7 +527,7 @@ export default function App() {
 
   if (page === "rules") {
     return (
-      <div className="portalPage">
+      <div className="">
         <header className="pageHeader">
           <div>
             <h1>YER6 Kurallar</h1>
